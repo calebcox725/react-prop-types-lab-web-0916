@@ -25,7 +25,7 @@ function isInvalidPropTypeError(spy, propName) {
     return false;
   }
 
-  return spy.lastCall.args.find(arg => arg.includes(`Invalid prop \`${propName}\``)) !== undefined;
+  return spy.lastCall.args.find(arg => arg.includes(`\`${propName}\``)) !== undefined;
 }
 
 function isRequiredPropTypeError(spy, propName) {
@@ -33,7 +33,7 @@ function isRequiredPropTypeError(spy, propName) {
     return false;
   }
 
-  return spy.lastCall.args.find(arg => arg.includes(`Required prop \`${propName}\``)) !== undefined;
+  return spy.lastCall.args.find(arg => arg.includes(`\`${propName}\``)) !== undefined;
 }
 
 describe('<Product />', () => {
